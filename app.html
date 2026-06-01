@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>EntreHub X</title>
+
+<style>
+
+:root{
+    --primary:#2563eb;
+    --secondary:#14b8a6;
+    --dark:#0f172a;
+    --light:#f8fafc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+header{
+    background:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px;
+}
+
+.hero-text h1{
+    font-size:55px;
+    color:var(--dark);
+}
+
+.hero-text p{
+    margin-top:20px;
+    font-size:18px;
+    color:#555;
+}
+
+.btn{
+    margin-top:25px;
+    padding:14px 28px;
+    border:none;
+    border-radius:10px;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:50px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.card h2{
+    color:var(--primary);
+}
+
+.marketplace{
+    padding:50px;
+}
+
+.freelancer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.freelancer{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+}
+
+.rating{
+    color:gold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">EntreHub X</div>
+
+    <nav>
+        Home
+        Marketplace
+        Projects
+        Messages
+        Dashboard
+    </nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+    <h1>Hire Elite Freelancers</h1>
+
+    <p>
+        Connect with designers,
+        developers, marketers and
+        entrepreneurs from around
+        the world.
+    </p>
+
+    <button class="btn">
+        Start Hiring
+    </button>
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="card">
+    <h2>12,483</h2>
+    <p>Freelancers</p>
+</div>
+
+<div class="card">
+    <h2>5,947</h2>
+    <p>Projects</p>
+</div>
+
+<div class="card">
+    <h2>$1.8M</h2>
+    <p>Total Earnings</p>
+</div>
+
+<div class="card">
+    <h2>97%</h2>
+    <p>Success Rate</p>
+</div>
+
+</section>
+
+<section class="marketplace">
+
+<h1>Top Freelancers</h1>
+
+<div class="freelancer-grid">
+
+<div class="freelancer">
+    <h3>Sarah Design</h3>
+    <p>UI/UX Designer</p>
+    <p class="rating">★★★★★</p>
+</div>
+
+<div class="freelancer">
+    <h3>James Developer</h3>
+    <p>Full Stack Engineer</p>
+    <p class="rating">★★★★★</p>
+</div>
+
+<div class="freelancer">
+    <h3>Kevin Marketing</h3>
+    <p>Digital Marketer</p>
+    <p class="rating">★★★★☆</p>
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+class AIRecommendationEngine {
+
+    recommendFreelancers(skill){
+
+        const freelancers = [
+            "Sarah Design",
+            "James Developer",
+            "Kevin Marketing"
+        ];
+
+        return freelancers;
+    }
+
+}
+
+class ProjectManager {
+
+    createProject(title,budget){
+
+        return {
+            id: Date.now(),
+            title,
+            budget,
+            status:"active"
+        };
+    }
+
+}
+
+const ai = new AIRecommendationEngine();
+
+console.log(
+    ai.recommendFreelancers("Web Design")
+);
+
+</script>
+
+</body>
+</html>
